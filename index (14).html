@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OTP SMS – Doğrulama Kodu Gönderimi | WOLTSMS</title>
+<meta name="description" content="Üyelik, giriş ve ödeme doğrulama kodlarını SMS ile saniyeler içinde ilet. API ile kolay entegrasyon, anlık teslim raporu, ₺0,35/SMS.">
+<link rel="canonical" href="https://www.woltsms.com/otp-sms/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WOLTSMS">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="OTP SMS – Doğrulama Kodu Gönderimi | WOLTSMS">
+<meta property="og:description" content="Üyelik, giriş ve ödeme doğrulama kodlarını SMS ile saniyeler içinde ilet. API ile kolay entegrasyon, anlık teslim raporu, ₺0,35/SMS.">
+<meta property="og:url" content="https://www.woltsms.com/otp-sms/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Ana Sayfa",
+   "item": "https://www.woltsms.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "OTP SMS",
+   "item": "https://www.woltsms.com/otp-sms/"
+  }
+ ]
+}</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "OTP SMS için İYS onayı gerekir mi?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Hayır. Doğrulama kodları bilgilendirme amaçlı olduğu için ticari ileti sayılmaz ve İYS onayı gerektirmez. Mesaja kampanya veya reklam eklenirse ticari ileti kapsamına girer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "OTP SMS'in fiyatı nedir?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Diğer gönderimlerle aynı: SMS başına ₺0,35. Kısa tutulan bir OTP mesajı tek SMS sayılır."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kod ne kadar sürede ulaşır?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "[DOLDUR: ortalama teslim süresi – yalnızca ölçülmüş bir değer yaz]"
+   }
+  }
+ ]
+}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="/">WOLT<span>SMS</span></a>
+<nav class="nav" aria-label="Ana menü"><a href="/">Ana Sayfa</a><a href="/toplu-sms-fiyatlari/">Fiyatlar</a><a href="/sms-api/">SMS API</a><a href="/otp-sms/" aria-current="page">OTP SMS</a><a href="/baslikli-sms/">Başlıklı SMS</a><a href="/blog/">Blog</a><a href="/hakkimizda/">Hakkımızda</a></nav>
+<a class="btn" href="https://www.woltsms.com/kayit">Yeni Üyelik Aç</a>
+</div></header>
+<main><div class="wrap">
+<nav class="crumbs" aria-label="Sayfa yolu"><a href="/">Ana Sayfa</a> › OTP SMS</nav>
+<h1>OTP SMS: doğrulama kodlarını saniyeler içinde ilet</h1>
+<div class="prose">
+<p>OTP (One-Time Password), yalnızca bir kez ve kısa süre geçerli olan doğrulama kodudur. Kullanıcı üye olurken, giriş yaparken veya ödeme onaylarken telefonuna gelen kodu girer; böylece hesabın gerçekten o kişiye ait olduğu doğrulanır. WOLTSMS ile bu kodları <a href="/sms-api/">SMS API</a> üzerinden otomatik gönderebilirsin.</p>
+
+<h2>OTP SMS nerelerde kullanılır?</h2>
+<ul class="ticks">
+<li>Yeni üyelikte telefon numarası doğrulama</li>
+<li>İki adımlı giriş (2FA)</li>
+<li>Şifre sıfırlama</li>
+<li>Ödeme ve önemli işlem onayı</li>
+<li>Kapıda ödeme siparişlerinde numara teyidi</li>
+</ul>
+
+<h2>İyi bir OTP mesajı nasıl yazılır?</h2>
+<ul>
+<li><strong>Kısa tut:</strong> Kod ve kısa bir uyarı yeterli; tek SMS'e sığması maliyeti düşük tutar.</li>
+<li><strong>Kodu başa koy:</strong> Telefon bildiriminde kod hemen görünsün.</li>
+<li><strong>Uyarı ekle:</strong> "Kodu kimseyle paylaşma" ifadesi dolandırıcılığa karşı kullanıcıyı korur.</li>
+<li><strong>Süreyi belirt:</strong> Kodun kaç dakika geçerli olduğunu yaz.</li>
+</ul>
+<pre><code>482913 doğrulama kodundur. 3 dakika geçerlidir. Kodu kimseyle paylaşma. – MARKAN</code></pre>
+
+<h2>Güvenlik için öneriler</h2>
+<ul>
+<li>Kodu 6 haneli ve rastgele üret; sunucu tarafında kısa süre (2–5 dakika) sakla.</li>
+<li>Aynı numaraya dakikada gönderilebilecek kod sayısını sınırla; bu hem kötüye kullanımı hem gereksiz maliyeti önler.</li>
+<li>Yanlış kod denemelerini sınırla (örneğin 5 denemeden sonra yeni kod iste).</li>
+<li>Kodu loglarda açık metin olarak tutma.</li>
+</ul>
+
+<h2>Sık sorulan sorular</h2>
+<details><summary>OTP SMS için İYS onayı gerekir mi?</summary><p>Hayır. Doğrulama kodları bilgilendirme amaçlı olduğu için ticari ileti sayılmaz ve İYS onayı gerektirmez. Mesaja kampanya veya reklam eklenirse ticari ileti kapsamına girer.</p></details>
+<details><summary>OTP SMS'in fiyatı nedir?</summary><p>Diğer gönderimlerle aynı: SMS başına ₺0,35. Kısa tutulan bir OTP mesajı tek SMS sayılır.</p></details>
+<details><summary>Kod ne kadar sürede ulaşır?</summary><p><span class="doldur">[DOLDUR: ortalama teslim süresi – yalnızca ölçülmüş bir değer yaz]</span></p></details>
+</div>
+
+<div class="cta"><div><h2>Doğrulama akışını bugün kur</h2><p>Üyeliğini aç, API anahtarını al.</p></div>
+<a class="btn" href="https://www.woltsms.com/kayit">Yeni Üyelik Aç</a></div>
+</div></main>
+<footer><div class="wrap">
+<div class="cols">
+<div><h4>WOLTSMS</h4>
+<p>Toplu SMS, OTP SMS ve SMS API hizmeti.</p>
+<p><span class="doldur">[DOLDUR: Şirket unvanı]</span><br>
+<span class="doldur">[DOLDUR: Açık adres]</span><br>
+Vergi dairesi / no: <span class="doldur">[DOLDUR]</span><br>
+MERSİS no: <span class="doldur">[DOLDUR]</span></p></div>
+<div><h4>Hizmetler</h4><ul>
+<li><a href="/toplu-sms-fiyatlari/">Toplu SMS Fiyatları</a></li>
+<li><a href="/sms-api/">SMS API</a></li>
+<li><a href="/otp-sms/">OTP SMS</a></li>
+<li><a href="/baslikli-sms/">Başlıklı SMS</a></li>
+<li><a href="/blog/">Rehberler</a></li></ul></div>
+<div><h4>Kurumsal</h4><ul>
+<li><a href="/hakkimizda/">Hakkımızda ve İletişim</a></li>
+<li><a href="/yasal/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</a></li>
+<li><a href="/yasal/kullanim-kosullari/">Kullanım Koşulları</a></li>
+<li><a href="/yasal/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a></li></ul></div>
+<div><h4>İletişim</h4><ul>
+<li><a href="https://t.me/WoltSmsAdmin" rel="noopener">Telegram: @WoltSmsAdmin</a></li>
+<li><a href="https://wa.me/995558213790" rel="noopener">WhatsApp: +995 558 21 37 90</a></li>
+<li>Telefon (TR): <span class="doldur">[DOLDUR]</span></li>
+<li>E-posta: <span class="doldur">[DOLDUR: info@woltsms.com]</span></li></ul></div>
+</div>
+<p class="copy">© 2026 WOLTSMS. Tüm hakları saklıdır. · <a href="https://www.woltsms.com/login" rel="nofollow">Bayi girişi</a></p>
+</div></footer>
+</body>
+</html>

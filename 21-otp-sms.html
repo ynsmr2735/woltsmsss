@@ -1,0 +1,42 @@
+<!--META {"path": "/otp-sms/", "h1": "OTP SMS", "crumb": "OTP SMS", "title": "OTP SMS – Doğrulama Kodu Gönderimi | WOLTSMS", "description": "Üyelik, giriş ve ödeme doğrulama kodlarını SMS ile saniyeler içinde ilet. API ile kolay entegrasyon, anlık teslim raporu, ₺0,35/SMS."} -->
+<main><div class="wrap">
+{{CRUMBS}}
+<h1>OTP SMS: doğrulama kodlarını saniyeler içinde ilet</h1>
+<div class="prose">
+<p>OTP (One-Time Password), yalnızca bir kez ve kısa süre geçerli olan doğrulama kodudur. Kullanıcı üye olurken, giriş yaparken veya ödeme onaylarken telefonuna gelen kodu girer; böylece hesabın gerçekten o kişiye ait olduğu doğrulanır. WOLTSMS ile bu kodları <a href="/sms-api/">SMS API</a> üzerinden otomatik gönderebilirsin.</p>
+
+<h2>OTP SMS nerelerde kullanılır?</h2>
+<ul class="ticks">
+<li>Yeni üyelikte telefon numarası doğrulama</li>
+<li>İki adımlı giriş (2FA)</li>
+<li>Şifre sıfırlama</li>
+<li>Ödeme ve önemli işlem onayı</li>
+<li>Kapıda ödeme siparişlerinde numara teyidi</li>
+</ul>
+
+<h2>İyi bir OTP mesajı nasıl yazılır?</h2>
+<ul>
+<li><strong>Kısa tut:</strong> Kod ve kısa bir uyarı yeterli; tek SMS'e sığması maliyeti düşük tutar.</li>
+<li><strong>Kodu başa koy:</strong> Telefon bildiriminde kod hemen görünsün.</li>
+<li><strong>Uyarı ekle:</strong> "Kodu kimseyle paylaşma" ifadesi dolandırıcılığa karşı kullanıcıyı korur.</li>
+<li><strong>Süreyi belirt:</strong> Kodun kaç dakika geçerli olduğunu yaz.</li>
+</ul>
+<pre><code>482913 doğrulama kodundur. 3 dakika geçerlidir. Kodu kimseyle paylaşma. – MARKAN</code></pre>
+
+<h2>Güvenlik için öneriler</h2>
+<ul>
+<li>Kodu 6 haneli ve rastgele üret; sunucu tarafında kısa süre (2–5 dakika) sakla.</li>
+<li>Aynı numaraya dakikada gönderilebilecek kod sayısını sınırla; bu hem kötüye kullanımı hem gereksiz maliyeti önler.</li>
+<li>Yanlış kod denemelerini sınırla (örneğin 5 denemeden sonra yeni kod iste).</li>
+<li>Kodu loglarda açık metin olarak tutma.</li>
+</ul>
+
+<h2>Sık sorulan sorular</h2>
+<details><summary>OTP SMS için İYS onayı gerekir mi?</summary><p>Hayır. Doğrulama kodları bilgilendirme amaçlı olduğu için ticari ileti sayılmaz ve İYS onayı gerektirmez. Mesaja kampanya veya reklam eklenirse ticari ileti kapsamına girer.</p></details>
+<details><summary>OTP SMS'in fiyatı nedir?</summary><p>Diğer gönderimlerle aynı: SMS başına ₺0,35. Kısa tutulan bir OTP mesajı tek SMS sayılır.</p></details>
+<details><summary>Kod ne kadar sürede ulaşır?</summary><p><span class="doldur">[DOLDUR: ortalama teslim süresi – yalnızca ölçülmüş bir değer yaz]</span></p></details>
+</div>
+
+<div class="cta"><div><h2>Doğrulama akışını bugün kur</h2><p>Üyeliğini aç, API anahtarını al.</p></div>
+<a class="btn" href="https://www.woltsms.com/kayit">Yeni Üyelik Aç</a></div>
+</div></main>

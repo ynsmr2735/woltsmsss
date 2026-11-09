@@ -1,0 +1,113 @@
+<!--META {"path": "/toplu-sms-fiyatlari/", "h1": "Toplu SMS Fiyatları", "crumb": "Toplu SMS Fiyatları", "title": "Toplu SMS Fiyatları 2026 – Paket Hesaplama | WOLTSMS", "description": "10.000'den 1.000.000 SMS'e kadar paket fiyatları. Mesajını yaz, alıcı sayısını gir, toplam tutarı anında gör; kurumsal teklif al.", "offers": [["Mini Paket – 10.000 SMS", "3500"], ["Standart Paket – 500.000 SMS", "175000"], ["Premium Paket – 1.000.000 SMS", "350000"]]} -->
+<main><div class="wrap">
+{{CRUMBS}}
+<h1>Toplu SMS Fiyatları (2026)</h1>
+<p class="prose">WOLTSMS'te tüm paketlerde SMS başına fiyat <strong>₺0,35</strong>'tir. Toplam maliyet; alıcı sayısına ve mesajının kaç SMS'e bölündüğüne bağlıdır. Aşağıdaki hesaplayıcıya mesajını yapıştır, alıcı sayısını gir, tutarı anında gör.</p>
+
+<h2>Paket fiyatları</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>Paket</th><th>SMS adedi</th><th>Toplam (₺)</th><th>SMS başına (₺)</th></tr></thead>
+<tbody>
+<tr><td>Mini</td><td>10.000</td><td>3.500</td><td>0,35</td></tr>
+<tr><td>Standart</td><td>500.000</td><td>175.000</td><td>0,35</td></tr>
+<tr><td>Premium</td><td>1.000.000</td><td>350.000</td><td>0,35</td></tr>
+<tr><td>Özel adet</td><td>İstediğin kadar</td><td>Adet × 0,35</td><td>0,35</td></tr>
+</tbody></table></div>
+<p class="meta">Fiyatlara KDV <span class="doldur">[DOLDUR: dahil / hariç]</span>. Bakiye yüklemeleri havale/EFT ile yapılır.</p>
+
+<h2 id="hesapla">Toplu SMS fiyat hesaplayıcı</h2>
+<div class="calc" id="calc">
+<label for="msg">Mesaj metni</label>
+<textarea id="msg" placeholder="Örn: Hafta sonuna özel tüm ürünlerde %20 indirim! Kod: HAFTA20">Hafta sonuna özel tüm ürünlerde %20 indirim! Kod: HAFTA20</textarea>
+<small id="enc"></small>
+<label for="rcpt">Alıcı sayısı</label>
+<input id="rcpt" type="number" min="1" step="1" value="10000" inputmode="numeric">
+<div class="out">
+<div><small>Karakter</small><b id="chars">0</b></div>
+<div><small>Mesaj başına SMS</small><b id="parts">1</b></div>
+<div><small>Toplam SMS</small><b id="total">0</b></div>
+<div><small>Tahmini tutar</small><b id="cost">₺0</b></div>
+</div>
+<p><small>Hesap yaklaşıktır; kesin SMS sayısı gönderim öncesinde panelde gösterilir. Türkçe karakter ve emoji kullanımı mesajı birden fazla SMS'e bölebilir.</small></p>
+</div>
+
+<h2>SMS sayısı nasıl hesaplanır?</h2>
+<div class="prose">
+<p>Bir mesajın kaç SMS sayılacağı, kullandığın karakterlere göre değişir:</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Karakter türü</th><th>Tek SMS sınırı</th><th>Uzun mesajda her parça</th></tr></thead>
+<tbody>
+<tr><td>Standart (Türkçe özel karakter yok)</td><td>160</td><td>153</td></tr>
+<tr><td>Türkçe karakterli (ç, ğ, ı, ş, Ğ, İ, Ş)</td><td>~155</td><td>~149</td></tr>
+<tr><td>Emoji veya diğer özel karakterler</td><td>70</td><td>67</td></tr>
+</tbody></table></div>
+<p>Örnek: 10.000 kişiye 200 karakterlik Türkçe karakterli bir mesaj göndermek, mesaj başına 2 SMS eder; toplam 20.000 SMS × ₺0,35 = ₺7.000. Ayrıntılı anlatım: <a href="/blog/sms-karakter-siniri-ve-fiyat-hesaplama/">SMS karakter sınırı ve fiyat hesaplama</a>.</p>
+<p>Maliyeti düşürmek için mesajı kısa tutabilir, emoji kullanmayabilir ve uzun linkler yerine kısaltılmış link tercih edebilirsin.</p>
+</div>
+
+<h2 id="siparis">Sipariş ver</h2>
+<div class="calc">
+<form id="order">
+<label for="o-name">Ad soyad</label><input id="o-name" required autocomplete="name">
+<label for="o-firm">Firma</label><input id="o-firm" autocomplete="organization">
+<label for="o-pack">Paket veya adet</label><input id="o-pack" required placeholder="Örn: Standart paket ya da 50.000 SMS">
+<p style="margin-top:16px"><button class="btn" type="submit">WhatsApp ile sipariş gönder</button>
+<a class="btn ghost" href="https://t.me/WoltSmsAdmin">Telegram'dan yaz</a></p>
+<p><small>Bilgilerin yalnızca siparişini işlemek için kullanılır. <a href="/yasal/kvkk-aydinlatma-metni/">KVKK Aydınlatma Metni</a></small></p>
+</form>
+</div>
+
+<h2>Sık sorulan sorular</h2>
+<div class="prose">
+<details><summary>Paket dışında farklı bir adet alabilir miyim?</summary><p>Evet. İstediğin adette SMS alabilirsin; fiyat SMS başına ₺0,35 olarak hesaplanır. Çok yüksek hacimler için özel teklif isteyebilirsin.</p></details>
+<details><summary>İletilemeyen SMS'ler ücretlendirilir mi?</summary><p><span class="doldur">[DOLDUR: iletilemeyen SMS'ler için iade/ücret politikası]</span></p></details>
+<details><summary>Bakiyemin kullanım süresi var mı?</summary><p><span class="doldur">[DOLDUR: bakiye geçerlilik süresi]</span></p></details>
+<details><summary>Ödeme yaptıktan sonra bakiye ne zaman yüklenir?</summary><p>Havale/EFT ödemen onaylandıktan sonra bakiye hesabına tanımlanır. Hızlandırmak için dekontu Telegram veya WhatsApp üzerinden iletebilirsin.</p></details>
+</div>
+
+<div class="cta"><div><h2>Fiyatı netleştir, hemen başla</h2><p>Üyeliğini aç, paketini seç, bugün gönder.</p></div>
+<a class="btn" href="https://www.woltsms.com/kayit">Yeni Üyelik Aç</a></div>
+</div></main>
+
+<script>
+(function(){
+  var GSM = "@£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ !\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà";
+  var EXT = "^{}\\[~]|€";
+  var TR = "çğışĞİŞ";
+  var PRICE = 0.35;
+  var $ = function(id){return document.getElementById(id)};
+  function analyse(t){
+    var mode = "gsm", len = 0;
+    for (var c of t){
+      if (GSM.indexOf(c) > -1) len += 1;
+      else if (EXT.indexOf(c) > -1) len += 2;
+      else if (TR.indexOf(c) > -1){ if (mode === "gsm") mode = "tr"; len += 1; }
+      else { mode = "ucs"; }
+    }
+    if (mode === "ucs") len = Array.from(t).reduce(function(n,c){return n + (c.codePointAt(0) > 0xFFFF ? 2 : 1)}, 0);
+    var lim = {gsm:[160,153], tr:[155,149], ucs:[70,67]}[mode];
+    var parts = len === 0 ? 0 : (len <= lim[0] ? 1 : Math.ceil(len / lim[1]));
+    return {mode: mode, len: len, parts: parts};
+  }
+  var fmt = new Intl.NumberFormat("tr-TR");
+  var money = new Intl.NumberFormat("tr-TR", {style:"currency", currency:"TRY", maximumFractionDigits:2});
+  function update(){
+    var a = analyse($("msg").value);
+    var n = Math.max(0, parseInt($("rcpt").value, 10) || 0);
+    var total = a.parts * n;
+    $("chars").textContent = fmt.format(a.len);
+    $("parts").textContent = a.parts;
+    $("total").textContent = fmt.format(total);
+    $("cost").textContent = money.format(total * PRICE);
+    $("enc").textContent = {gsm:"Standart karakter seti", tr:"Türkçe karakterli mesaj", ucs:"Emoji / özel karakter içeriyor – SMS sınırı 70 karaktere düşer"}[a.mode];
+  }
+  $("msg").addEventListener("input", update);
+  $("rcpt").addEventListener("input", update);
+  update();
+  $("order").addEventListener("submit", function(e){
+    e.preventDefault();
+    var text = "Merhaba, WOLTSMS sipariş talebi:\nAd soyad: " + $("o-name").value + "\nFirma: " + $("o-firm").value + "\nPaket/adet: " + $("o-pack").value;
+    window.open("https://wa.me/995558213790?text=" + encodeURIComponent(text), "_blank", "noopener");
+  });
+})();
+</script>

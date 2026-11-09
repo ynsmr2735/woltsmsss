@@ -1,0 +1,54 @@
+<!--META {"path": "/sms-api/", "h1": "SMS API", "crumb": "SMS API", "title": "SMS API – Kendi Yazılımınızdan Toplu SMS | WOLTSMS", "description": "SMS API ile web sitenden, e-ticaret altyapından veya CRM'inden otomatik SMS gönder, teslim raporlarını sorgula. Kolay entegrasyon, ₺0,35/SMS."} -->
+<main><div class="wrap">
+{{CRUMBS}}
+<h1>SMS API: kendi yazılımından SMS gönder</h1>
+<div class="prose">
+<p>WOLTSMS SMS API, sitenin, uygulamanın ya da iş yazılımının SMS'i elle değil otomatik göndermesini sağlar. Sipariş onayı, kargo bildirimi, randevu hatırlatma veya doğrulama kodu gibi mesajlar, olay gerçekleştiği anda kendiliğinden gider. Fiyat panelden gönderimle aynıdır: SMS başına <strong>₺0,35</strong>.</p>
+
+<h2>API ile neler yapabilirsin?</h2>
+<ul class="ticks">
+<li>Tek bir numaraya veya bir listeye toplu SMS gönderme</li>
+<li>Gönderilen mesajların teslim durumunu sorgulama</li>
+<li>Bakiye sorgulama</li>
+<li><span class="doldur">[DOLDUR: API'nin desteklediği diğer işlemler – ileri tarihli gönderim, webhook vb.]</span></li>
+</ul>
+
+<h2>Nerelerde kullanılır?</h2>
+<div class="table-scroll"><table>
+<thead><tr><th>Kullanım</th><th>Örnek mesaj</th></tr></thead>
+<tbody>
+<tr><td>E-ticaret sipariş bildirimi</td><td>Siparişin alındı. Sipariş no: 10482. Kargoya verildiğinde haber vereceğiz.</td></tr>
+<tr><td>Kargo takibi</td><td>Siparişin kargoya verildi. Takip no: 123456789.</td></tr>
+<tr><td>Randevu hatırlatma</td><td>Yarın 14:30'daki randevunu hatırlatırız. İptal için bu numarayı arayabilirsin.</td></tr>
+<tr><td>Doğrulama kodu (<a href="/otp-sms/">OTP</a>)</td><td>Giriş kodun: 482913. Kodu kimseyle paylaşma.</td></tr>
+<tr><td>Sistem uyarıları</td><td>Sunucu disk doluluğu %90'ı geçti.</td></tr>
+</tbody></table></div>
+
+<h2>Entegrasyon adımları</h2>
+<ol class="steps">
+<li><strong>Üyelik aç ve bakiye yükle.</strong> <a href="https://www.woltsms.com/kayit">Kayıt formu</a> ile hesabını oluştur.</li>
+<li><strong>API anahtarını oluştur.</strong> Panelde API bölümünden anahtarını al. Anahtarı kimseyle paylaşma ve kodunda açık metin olarak tutma.</li>
+<li><strong>Dokümantasyonu incele.</strong> İstek adresi, parametreler ve hata kodları panelde yer alır.</li>
+<li><strong>Test et, sonra canlıya al.</strong> Önce kendi numarana küçük bir gönderim yap, teslim raporunu kontrol et.</li>
+</ol>
+
+<h2>Örnek istek</h2>
+<p>Aşağıdaki örnek, isteğin genel yapısını gösterir. Gerçek adres ve parametre adları için panel dokümantasyonunu kullan.</p>
+<pre><code>POST <span class="doldur">[DOLDUR: API adresi]</span>
+Content-Type: application/json
+Authorization: Bearer API_ANAHTARIN
+
+{
+  "to": ["905xxxxxxxxx"],
+  "message": "Siparişin alındı. Sipariş no: 10482"
+}</code></pre>
+
+<h2>Sık sorulan sorular</h2>
+<details><summary>SMS API kullanmak için ek ücret var mı?</summary><p>Hayır. API ile gönderilen her SMS, panelden gönderilenle aynı şekilde ₺0,35 olarak ücretlendirilir.</p></details>
+<details><summary>Hangi programlama dilleriyle çalışır?</summary><p>API standart HTTP istekleriyle çalıştığı için PHP, Python, Node.js, C#, Java gibi HTTP isteği gönderebilen her dille kullanılabilir.</p></details>
+<details><summary>Bilgilendirme SMS'leri için İYS onayı gerekir mi?</summary><p>Sipariş, kargo, randevu ve doğrulama kodu gibi bilgilendirme amaçlı mesajlar İYS onayı gerektirmez. Kampanya ve reklam içerikli mesajlar ise alıcının İYS'de kayıtlı onayını gerektirir. Ayrıntılar: <a href="/blog/iys-nedir-ticari-sms-izni/">İYS rehberi</a>.</p></details>
+</div>
+
+<div class="cta"><div><h2>API anahtarını hemen al</h2><p>Üyeliğini aç, dakikalar içinde entegrasyona başla.</p></div>
+<a class="btn" href="https://www.woltsms.com/kayit">Yeni Üyelik Aç</a></div>
+</div></main>
